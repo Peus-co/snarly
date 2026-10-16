@@ -1,0 +1,10 @@
+{
+  "name": "snarly",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "cd Frontend && npm run dev",
+    "build": "cd Frontend && npm run build",
+    "backend": "cd Backend && uvicorn main:app --reload --port 8000"
+  }
+}

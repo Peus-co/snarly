@@ -1,0 +1,89 @@
+/* Glass look for CardNav. Replaces your old header.css (nothing else needed). */
+
+/* stays at the top while the page scrolls */
+.card-nav-container.glass-nav {
+  position: fixed;
+  top: 1.25rem;
+  color: #fff;
+}
+
+/* The glass bar */
+.glass-nav .card-nav {
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 2rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.01) 45%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  backdrop-filter: blur(12px) saturate(140%);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.03);
+}
+
+/* Text logo (used when no logo image is given) */
+.glass-nav .logo-text {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+}
+
+/* Menu cards = small glass panels */
+.glass-nav .nav-card {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0)
+  );
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0),
+    inset 0 1px 0 rgba(255, 255, 255, 0);
+  transition: background-color 0.25s ease;
+}
+
+.glass-nav .nav-card-link {
+  color: inherit;
+}
+
+.glass-nav .nav-card:hover {
+  background-color: rgba(49, 41, 41, 0);
+}
+
+.glass-nav .card-nav-cta-button {
+  height: 100%;
+  padding: 0 1.2rem;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.glass-nav .card-nav-cta-button:hover {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Same as original CardNav: the button is hidden on phones (Sign Up is in the menu) */
+@media (max-width: 768px) {
+  .card-nav-container.glass-nav {
+    top: 1rem;
+  }
+
+  .glass-nav .card-nav-cta-button {
+    display: none;
+  }
+}
